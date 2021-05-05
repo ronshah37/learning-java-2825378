@@ -1,13 +1,14 @@
 public class Hotel {
 
-    public static void calculateTotalMealPrice(double listedMealPrice, double tipRate,double taxRate) {
+    public static double calculateTotalMealPrice(double listedMealPrice, double tipRate,double taxRate) {
         double tip = tipRate * listedMealPrice;
         double tax = taxRate * listedMealPrice;
         double finalPrice = listedMealPrice + tip +tax;
-        System.out.println("Your total meal price is " + finalPrice);
+        return finalPrice;
     }
 
     public static void main(String[] args) {
-        calculateTotalMealPrice(50, 0.10, 0.12);
+        double groupTotalMealPrice = calculateTotalMealPrice(50, 0.10, 0.12);
+        System.out.println("Your total meal price is " + groupTotalMealPrice);
     }
 }
